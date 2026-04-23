@@ -13,3 +13,6 @@ HTML5 - Struktur konten.
 CSS3 - Styling & layouting.
 
 JavaScript - Logika interaksi.
+
+# web dasar
+![hasil](hasil.png)
