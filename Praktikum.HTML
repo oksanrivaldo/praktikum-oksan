@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Oksan - Refined</title>
+    <style>
+        /* Menggunakan style yang sama dengan teman kamu agar tampilan konsisten */
+        body { 
+            font-family: sans-serif; 
+            background-color: white; 
+            color: black; 
+            padding: 20px; 
+        }
+        .sidebar { 
+            background: #f4f4f4; 
+            padding: 10px; 
+            border-left: 5px solid #ccc; 
+            margin: 10px 0;
+        }
+        table, th, td { 
+            border: 1px solid black; 
+            border-collapse: collapse; 
+            padding: 8px; 
+            margin-top: 10px;
+        }
+        .red-text { color: red; }
+        .result-box { color: blue; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1 class="red-text">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <img src="https://wallpapers.com/images/hd/persib-bandung-logo-blue-background-4nn1rxvpwftn5gpw.jpg" width="300" alt="Logo Persib">
+
+    <aside class="sidebar">
+        <p>Ini adalah konten sidebar untuk informasi tambahan</p>
+    </aside>
+
+    <p>Lorem ipsum</p>
+
+    <h2>Ini Artikel</h2>
+    <p>Ini adalah konten artikel dengan berbagai informasi menarik.</p>
+
+    <h3>Subjudul</h3>
+    <p>Ini adalah konten tambahan untuk informasi lebih dalam.</p>
+
+    <div id="identitas-pemilik"></div>
+
+    <hr>
+
+    <form action="/submit" method="post">
+        <label>Nama:</label><br>
+        <input type="text" id="inputNamaForm"><br><br>
+
+        <label>Nomor:</label><br>
+        <input type="number"><br><br>
+
+        <label>Tanggal:</label><br>
+        <input type="date"><br><br>
+
+        <label>Waktu:</label><br>
+        <input type="time"><br><br>
+
+        <label>Warna:</label><br>
+        <input type="color"><br><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+
+    <hr>
+
+    <h3>Interaksi JavaScript</h3>
+    <button id="btnAlert">Klik Saya (Alert)</button>
+    <button id="btnUbah">Ubah Teks Judul</button>
+    <h1 id="judulInteraksi">Teks Awal Oksan</h1>
+
+    <br>
+    <input type="text" id="inputNamaInteraksi" placeholder="Masukkan nama kamu...">
+    <button id="btnTampilkan">Tampilkan Nama</button>
+    <p id="hasilTampil" class="result-box"></p>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Uton</td>
+                <td>21</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>&copy; 2024 Punya Oksan</p>
+    </footer>
+
+    <script>
+        // 1. Menampilkan Data Pemilik (Oksan) ke dalam Div
+        const infoDiv = document.getElementById('identitas-pemilik');
+        infoDiv.innerHTML = "<strong>Pemilik Web:</strong> Oksan, <strong>Status:</strong> Mahasiswa";
+
+        // 2. Fungsi Alert
+        document.getElementById("btnAlert").addEventListener("click", () => {
+            alert("Halo Oksan! JavaScript kamu sudah aktif!");
+        });
+
+        // 3. Fungsi Mengubah Teks
+        const judul = document.getElementById("judulInteraksi");
+        document.getElementById("btnUbah").addEventListener("click", () => {
+            judul.textContent = "Teks Berhasil Diubah Oleh Oksan!";
+            judul.style.color = "green";
+        });
+
+        // 4. Fungsi Menampilkan Input
+        document.getElementById("btnTampilkan").addEventListener("click", function() {
+            const nama = document.getElementById("inputNamaInteraksi").value;
+            if (nama === "") {
+                alert("Waduh, namanya diisi dulu dong!");
+            } else {    
+                document.getElementById("hasilTampil").innerHTML = "Selamat Datang, " + nama + "!";
+            }
+        });
+    </script>
+</body>
+</html>
